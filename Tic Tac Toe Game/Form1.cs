@@ -117,5 +117,36 @@ namespace Tic_Tac_Toe_Game
                 b.Text = "";
             }//end if
         }
+
+        private void GameMechanics_MenuTool_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Decide who plays X and who plays O \n" +
+                "2. Players take turns by putting their marks in empty squares \n" +
+                "3. The first player to get 3 of their marks in a row (vertically, horizontally, or diagonally) wins \n" +
+                "4. When all 9 squares are full, the game is over. \n" +
+                "If no player has 3 marks in a row, the game ends in a draw", "Game Mechanics");
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Program Assessment #1 on Object-Oriented Programming", "About");
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            turn = true;
+            turn_count = 0;
+
+            try
+            {
+                foreach (Control c in Controls)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = true;
+                    b.Text = "";
+                }//end foreach
+            }//end try
+            catch { }
+        }
     }
 }
