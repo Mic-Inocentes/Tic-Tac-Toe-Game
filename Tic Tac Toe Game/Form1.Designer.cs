@@ -47,6 +47,7 @@ namespace Tic_Tac_Toe_Game
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -73,7 +74,7 @@ namespace Tic_Tac_Toe_Game
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // A1
@@ -86,6 +87,8 @@ namespace Tic_Tac_Toe_Game
             this.A1.TabIndex = 1;
             this.A1.UseVisualStyleBackColor = false;
             this.A1.Click += new System.EventHandler(this.click_button);
+            this.A1.MouseEnter += new System.EventHandler(this.enter_button);
+            this.A1.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // B1
             // 
@@ -97,6 +100,8 @@ namespace Tic_Tac_Toe_Game
             this.B1.TabIndex = 2;
             this.B1.UseVisualStyleBackColor = false;
             this.B1.Click += new System.EventHandler(this.click_button);
+            this.B1.MouseEnter += new System.EventHandler(this.enter_button);
+            this.B1.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // C1
             // 
@@ -108,6 +113,8 @@ namespace Tic_Tac_Toe_Game
             this.C1.TabIndex = 3;
             this.C1.UseVisualStyleBackColor = false;
             this.C1.Click += new System.EventHandler(this.click_button);
+            this.C1.MouseEnter += new System.EventHandler(this.enter_button);
+            this.C1.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // A2
             // 
@@ -119,6 +126,8 @@ namespace Tic_Tac_Toe_Game
             this.A2.TabIndex = 4;
             this.A2.UseVisualStyleBackColor = false;
             this.A2.Click += new System.EventHandler(this.click_button);
+            this.A2.MouseEnter += new System.EventHandler(this.enter_button);
+            this.A2.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // B2
             // 
@@ -130,6 +139,8 @@ namespace Tic_Tac_Toe_Game
             this.B2.TabIndex = 5;
             this.B2.UseVisualStyleBackColor = false;
             this.B2.Click += new System.EventHandler(this.click_button);
+            this.B2.MouseEnter += new System.EventHandler(this.enter_button);
+            this.B2.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // C2
             // 
@@ -141,6 +152,8 @@ namespace Tic_Tac_Toe_Game
             this.C2.TabIndex = 6;
             this.C2.UseVisualStyleBackColor = false;
             this.C2.Click += new System.EventHandler(this.click_button);
+            this.C2.MouseEnter += new System.EventHandler(this.enter_button);
+            this.C2.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // A3
             // 
@@ -152,6 +165,8 @@ namespace Tic_Tac_Toe_Game
             this.A3.TabIndex = 7;
             this.A3.UseVisualStyleBackColor = false;
             this.A3.Click += new System.EventHandler(this.click_button);
+            this.A3.MouseEnter += new System.EventHandler(this.enter_button);
+            this.A3.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // B3
             // 
@@ -163,6 +178,8 @@ namespace Tic_Tac_Toe_Game
             this.B3.TabIndex = 8;
             this.B3.UseVisualStyleBackColor = false;
             this.B3.Click += new System.EventHandler(this.click_button);
+            this.B3.MouseEnter += new System.EventHandler(this.enter_button);
+            this.B3.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // C3
             // 
@@ -174,6 +191,8 @@ namespace Tic_Tac_Toe_Game
             this.C3.TabIndex = 9;
             this.C3.UseVisualStyleBackColor = false;
             this.C3.Click += new System.EventHandler(this.click_button);
+            this.C3.MouseEnter += new System.EventHandler(this.enter_button);
+            this.C3.MouseLeave += new System.EventHandler(this.leave_button);
             // 
             // Form1
             // 

@@ -96,5 +96,26 @@ namespace Tic_Tac_Toe_Game
             }//end try
             catch { }
         }
+
+        private void enter_button(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Enabled)
+            {
+                if (turn)
+                    b.Text = "X";
+                else
+                    b.Text = "O";
+            }//end if
+        }
+
+        private void leave_button(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Enabled)
+            {
+                b.Text = "";
+            }//end if
+        }
     }
 }
