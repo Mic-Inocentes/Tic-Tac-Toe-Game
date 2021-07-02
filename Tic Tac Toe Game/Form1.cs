@@ -148,9 +148,5 @@ namespace Tic_Tac_Toe_Game
             }//end try
             catch { }
         }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.White, ButtonBorderStyle.Solid);
-        }
     }
 }
