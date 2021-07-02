@@ -29,7 +29,6 @@ namespace Tic_Tac_Toe_Game
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +48,7 @@ namespace Tic_Tac_Toe_Game
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -61,6 +60,8 @@ namespace Tic_Tac_Toe_Game
             // 
             // newGameToolStripMenuItem
             // 
+            this.newGameToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.newGameToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.newGameToolStripMenuItem.Text = "New Game";
@@ -71,6 +72,7 @@ namespace Tic_Tac_Toe_Game
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.GameMechanics_MenuTool,
             this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -78,20 +80,23 @@ namespace Tic_Tac_Toe_Game
             // GameMechanics_MenuTool
             // 
             this.GameMechanics_MenuTool.Name = "GameMechanics_MenuTool";
-            this.GameMechanics_MenuTool.Size = new System.Drawing.Size(180, 22);
+            this.GameMechanics_MenuTool.Size = new System.Drawing.Size(165, 22);
             this.GameMechanics_MenuTool.Text = "Game Mechanics";
             this.GameMechanics_MenuTool.Click += new System.EventHandler(this.GameMechanics_MenuTool_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // A1
             // 
-            this.A1.BackColor = System.Drawing.SystemColors.Info;
+            this.A1.BackColor = System.Drawing.Color.HotPink;
+            this.A1.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.A1.FlatAppearance.BorderSize = 2;
+            this.A1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.A1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A1.Location = new System.Drawing.Point(12, 40);
             this.A1.Name = "A1";
@@ -104,7 +109,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // B1
             // 
-            this.B1.BackColor = System.Drawing.SystemColors.Info;
+            this.B1.BackColor = System.Drawing.Color.HotPink;
+            this.B1.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.B1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B1.Location = new System.Drawing.Point(93, 40);
             this.B1.Name = "B1";
@@ -117,7 +124,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // C1
             // 
-            this.C1.BackColor = System.Drawing.SystemColors.Info;
+            this.C1.BackColor = System.Drawing.Color.HotPink;
+            this.C1.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.C1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C1.Location = new System.Drawing.Point(174, 40);
             this.C1.Name = "C1";
@@ -130,7 +139,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // A2
             // 
-            this.A2.BackColor = System.Drawing.SystemColors.Info;
+            this.A2.BackColor = System.Drawing.Color.HotPink;
+            this.A2.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.A2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.A2.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A2.Location = new System.Drawing.Point(12, 121);
             this.A2.Name = "A2";
@@ -143,7 +154,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // B2
             // 
-            this.B2.BackColor = System.Drawing.SystemColors.Info;
+            this.B2.BackColor = System.Drawing.Color.HotPink;
+            this.B2.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.B2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B2.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B2.Location = new System.Drawing.Point(93, 121);
             this.B2.Name = "B2";
@@ -156,7 +169,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // C2
             // 
-            this.C2.BackColor = System.Drawing.SystemColors.Info;
+            this.C2.BackColor = System.Drawing.Color.HotPink;
+            this.C2.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.C2.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C2.Location = new System.Drawing.Point(174, 121);
             this.C2.Name = "C2";
@@ -169,7 +184,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // A3
             // 
-            this.A3.BackColor = System.Drawing.SystemColors.Info;
+            this.A3.BackColor = System.Drawing.Color.HotPink;
+            this.A3.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.A3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.A3.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A3.Location = new System.Drawing.Point(12, 202);
             this.A3.Name = "A3";
@@ -182,7 +199,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // B3
             // 
-            this.B3.BackColor = System.Drawing.SystemColors.Info;
+            this.B3.BackColor = System.Drawing.Color.HotPink;
+            this.B3.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.B3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B3.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B3.Location = new System.Drawing.Point(93, 202);
             this.B3.Name = "B3";
@@ -195,7 +214,9 @@ namespace Tic_Tac_Toe_Game
             // 
             // C3
             // 
-            this.C3.BackColor = System.Drawing.SystemColors.Info;
+            this.C3.BackColor = System.Drawing.Color.HotPink;
+            this.C3.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.C3.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C3.Location = new System.Drawing.Point(174, 202);
             this.C3.Name = "C3";
@@ -211,7 +232,6 @@ namespace Tic_Tac_Toe_Game
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(266, 294);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.B3);
