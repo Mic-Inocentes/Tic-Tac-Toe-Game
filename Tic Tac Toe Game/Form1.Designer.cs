@@ -47,6 +47,11 @@ namespace Tic_Tac_Toe_Game
             this.PlayerX_lbl = new System.Windows.Forms.Label();
             this.PlayerO_lbl = new System.Windows.Forms.Label();
             this.Tie_lbl = new System.Windows.Forms.Label();
+            this.XScore_lbl = new System.Windows.Forms.Label();
+            this.OScore_lbl = new System.Windows.Forms.Label();
+            this.TieScore_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -275,12 +280,72 @@ namespace Tic_Tac_Toe_Game
             this.Tie_lbl.TabIndex = 13;
             this.Tie_lbl.Text = "Tie/s:";
             // 
+            // XScore_lbl
+            // 
+            this.XScore_lbl.AutoSize = true;
+            this.XScore_lbl.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XScore_lbl.ForeColor = System.Drawing.Color.HotPink;
+            this.XScore_lbl.Location = new System.Drawing.Point(371, 80);
+            this.XScore_lbl.Name = "XScore_lbl";
+            this.XScore_lbl.Size = new System.Drawing.Size(19, 19);
+            this.XScore_lbl.TabIndex = 14;
+            this.XScore_lbl.Text = "0";
+            // 
+            // OScore_lbl
+            // 
+            this.OScore_lbl.AutoSize = true;
+            this.OScore_lbl.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OScore_lbl.ForeColor = System.Drawing.Color.HotPink;
+            this.OScore_lbl.Location = new System.Drawing.Point(370, 110);
+            this.OScore_lbl.Name = "OScore_lbl";
+            this.OScore_lbl.Size = new System.Drawing.Size(19, 19);
+            this.OScore_lbl.TabIndex = 15;
+            this.OScore_lbl.Text = "0";
+            // 
+            // TieScore_lbl
+            // 
+            this.TieScore_lbl.AutoSize = true;
+            this.TieScore_lbl.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TieScore_lbl.ForeColor = System.Drawing.Color.HotPink;
+            this.TieScore_lbl.Location = new System.Drawing.Point(370, 140);
+            this.TieScore_lbl.Name = "TieScore_lbl";
+            this.TieScore_lbl.Size = new System.Drawing.Size(19, 19);
+            this.TieScore_lbl.TabIndex = 16;
+            this.TieScore_lbl.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.HotPink;
+            this.label1.Location = new System.Drawing.Point(272, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Whose Turn Is It?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.HotPink;
+            this.label2.Location = new System.Drawing.Point(323, 221);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 46);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "X";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(438, 294);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TieScore_lbl);
+            this.Controls.Add(this.OScore_lbl);
+            this.Controls.Add(this.XScore_lbl);
             this.Controls.Add(this.Tie_lbl);
             this.Controls.Add(this.PlayerO_lbl);
             this.Controls.Add(this.PlayerX_lbl);
@@ -328,6 +393,11 @@ namespace Tic_Tac_Toe_Game
         private System.Windows.Forms.Label PlayerX_lbl;
         private System.Windows.Forms.Label PlayerO_lbl;
         private System.Windows.Forms.Label Tie_lbl;
+        private System.Windows.Forms.Label XScore_lbl;
+        private System.Windows.Forms.Label OScore_lbl;
+        private System.Windows.Forms.Label TieScore_lbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
