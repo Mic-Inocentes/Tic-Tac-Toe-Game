@@ -29,6 +29,48 @@ namespace Tic_Tac_Toe_Game
             }
         }
 
+        private void CheckForWinner()
+        {
+            if ((A1_bttn.Text == "X" && A2_bttn.Text == "X" && A3_bttn.Text == "X") ||
+                (B1_bttn.Text == "X" && B2_bttn.Text == "X" && B3_bttn.Text == "X") ||
+                (C1_bttn.Text == "X" && C2_bttn.Text == "X" && C3_bttn.Text == "X") ||
+                (A1_bttn.Text == "X" && B1_bttn.Text == "X" && C1_bttn.Text == "X") ||
+                (A2_bttn.Text == "X" && B2_bttn.Text == "X" && C2_bttn.Text == "X") ||
+                (A3_bttn.Text == "X" && B3_bttn.Text == "X" && C3_bttn.Text == "X") ||
+                (A1_bttn.Text == "X" && B2_bttn.Text == "X" && C3_bttn.Text == "X") ||
+                (A3_bttn.Text == "X" && B2_bttn.Text == "X" && C3_bttn.Text == "X"))
+
+                {
+                MessageBox.Show("X Wins!");
+                intXWins++;
+                XScore_lbl.Text = intXWins.ToString();
+                }
+
+            else if ((A1_bttn.Text == "O" && A2_bttn.Text == "O" && A3_bttn.Text == "O") ||
+                (B1_bttn.Text == "O" && B2_bttn.Text == "O" && B3_bttn.Text == "O") ||
+                (C1_bttn.Text == "O" && C2_bttn.Text == "O" && C3_bttn.Text == "O") ||
+                (A1_bttn.Text == "O" && B1_bttn.Text == "O" && C1_bttn.Text == "O") ||
+                (A2_bttn.Text == "O" && B2_bttn.Text == "O" && C2_bttn.Text == "O") ||
+                (A3_bttn.Text == "O" && B3_bttn.Text == "O" && C3_bttn.Text == "O") ||
+                (A1_bttn.Text == "O" && B2_bttn.Text == "O" && C3_bttn.Text == "O") ||
+                (A3_bttn.Text == "O" && B2_bttn.Text == "O" && C3_bttn.Text == "O"))
+
+            {
+                MessageBox.Show("O Wins!");
+                intOWins++;
+                OScore_lbl.Text = intOWins.ToString();
+            }
+
+            else if (A1_bttn.Text !="" && A2_bttn.Text != "" && A3_bttn.Text != "" &&
+                B1_bttn.Text != "" && B2_bttn.Text != "" && B3_bttn.Text != "" &&
+                C1_bttn.Text != "" && C2_bttn.Text != "" && C3_bttn.Text != "")
+            {
+                MessageBox.Show("It's a tie!");
+                intTies++;
+                TieScore_lbl.Text = intTies.ToString();
+            }
+        }
+
         private void resetGame()
         {
             A1_bttn.Enabled = true;
@@ -62,6 +104,7 @@ namespace Tic_Tac_Toe_Game
                 A1_bttn.Text = "O";
             }
             A1_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -76,6 +119,7 @@ namespace Tic_Tac_Toe_Game
                 A2_bttn.Text = "O";
             }
             A2_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -90,6 +134,7 @@ namespace Tic_Tac_Toe_Game
                 A3_bttn.Text = "O";
             }
             A3_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -104,6 +149,7 @@ namespace Tic_Tac_Toe_Game
                 B1_bttn.Text = "O";
             }
             B1_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -118,6 +164,7 @@ namespace Tic_Tac_Toe_Game
                 B2_bttn.Text = "O";
             }
             B2_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -132,6 +179,7 @@ namespace Tic_Tac_Toe_Game
                 B3_bttn.Text = "O";
             }
             B3_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -146,6 +194,7 @@ namespace Tic_Tac_Toe_Game
                 C1_bttn.Text = "O";
             }
             C1_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -160,6 +209,7 @@ namespace Tic_Tac_Toe_Game
                 C2_bttn.Text = "O";
             }
             C2_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
@@ -174,6 +224,7 @@ namespace Tic_Tac_Toe_Game
                 C3_bttn.Text = "O";
             }
             C3_bttn.Enabled = false;
+            CheckForWinner();
             ChangeTurn();
         }
 
