@@ -47,6 +47,7 @@ namespace Tic_Tac_Toe_Game
             this.C3_bttn = new System.Windows.Forms.Button();
             this.Turn2_lbl = new System.Windows.Forms.Label();
             this.Turn1_lbl = new System.Windows.Forms.Label();
+            this.NewGame_bttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Scoreboard_lbl
@@ -259,11 +260,24 @@ namespace Tic_Tac_Toe_Game
             this.Turn1_lbl.AutoSize = true;
             this.Turn1_lbl.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Turn1_lbl.ForeColor = System.Drawing.Color.HotPink;
-            this.Turn1_lbl.Location = new System.Drawing.Point(329, 219);
+            this.Turn1_lbl.Location = new System.Drawing.Point(328, 219);
             this.Turn1_lbl.Name = "Turn1_lbl";
             this.Turn1_lbl.Size = new System.Drawing.Size(47, 42);
             this.Turn1_lbl.TabIndex = 27;
             this.Turn1_lbl.Text = "X";
+            // 
+            // NewGame_bttn
+            // 
+            this.NewGame_bttn.BackColor = System.Drawing.Color.HotPink;
+            this.NewGame_bttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewGame_bttn.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewGame_bttn.Location = new System.Drawing.Point(60, 281);
+            this.NewGame_bttn.Name = "NewGame_bttn";
+            this.NewGame_bttn.Size = new System.Drawing.Size(129, 31);
+            this.NewGame_bttn.TabIndex = 28;
+            this.NewGame_bttn.Text = "New Game";
+            this.NewGame_bttn.UseVisualStyleBackColor = false;
+            this.NewGame_bttn.Click += new System.EventHandler(this.NewGame_bttn_Click);
             // 
             // Form1
             // 
@@ -271,6 +285,7 @@ namespace Tic_Tac_Toe_Game
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(438, 336);
+            this.Controls.Add(this.NewGame_bttn);
             this.Controls.Add(this.Turn1_lbl);
             this.Controls.Add(this.Turn2_lbl);
             this.Controls.Add(this.C3_bttn);
@@ -318,6 +333,7 @@ namespace Tic_Tac_Toe_Game
         private System.Windows.Forms.Button C3_bttn;
         private System.Windows.Forms.Label Turn2_lbl;
         private System.Windows.Forms.Label Turn1_lbl;
+        private System.Windows.Forms.Button NewGame_bttn;
     }
 }
 

@@ -15,6 +15,42 @@ namespace Tic_Tac_Toe_Game
         int intXWins, intOWins, intTies;
         string strWhoseTurnItIs;
 
+        private void ChangeTurn()
+        {
+            if (strWhoseTurnItIs == "X")
+            {
+                strWhoseTurnItIs = "O";
+                Turn1_lbl.Text = "O";
+            }
+            else
+            {
+                strWhoseTurnItIs = "X";
+                Turn1_lbl.Text = "X";
+            }
+        }
+
+        private void resetGame()
+        {
+            A1_bttn.Enabled = true;
+            A1_bttn.Text = "";
+            A2_bttn.Enabled = true;
+            A2_bttn.Text = "";
+            A3_bttn.Enabled = true;
+            A3_bttn.Text = "";
+            B1_bttn.Enabled = true;
+            B1_bttn.Text = "";
+            B2_bttn.Enabled = true;
+            B2_bttn.Text = "";
+            B3_bttn.Enabled = true;
+            B3_bttn.Text = "";
+            C1_bttn.Enabled = true;
+            C1_bttn.Text = "";
+            C2_bttn.Enabled = true;
+            C2_bttn.Text = "";
+            C3_bttn.Enabled = true;
+            C3_bttn.Text = "";
+        }
+
         private void A1_bttn_Click(object sender, EventArgs e)
         {
             if (strWhoseTurnItIs == "X")
@@ -26,6 +62,7 @@ namespace Tic_Tac_Toe_Game
                 A1_bttn.Text = "O";
             }
             A1_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void A2_bttn_Click(object sender, EventArgs e)
@@ -39,6 +76,7 @@ namespace Tic_Tac_Toe_Game
                 A2_bttn.Text = "O";
             }
             A2_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void A3_bttn_Click(object sender, EventArgs e)
@@ -52,6 +90,7 @@ namespace Tic_Tac_Toe_Game
                 A3_bttn.Text = "O";
             }
             A3_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void B1_bttn_Click(object sender, EventArgs e)
@@ -65,6 +104,7 @@ namespace Tic_Tac_Toe_Game
                 B1_bttn.Text = "O";
             }
             B1_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void B2_bttn_Click(object sender, EventArgs e)
@@ -78,6 +118,7 @@ namespace Tic_Tac_Toe_Game
                 B2_bttn.Text = "O";
             }
             B2_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void B3_bttn_Click(object sender, EventArgs e)
@@ -91,6 +132,7 @@ namespace Tic_Tac_Toe_Game
                 B3_bttn.Text = "O";
             }
             B3_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void C1_bttn_Click(object sender, EventArgs e)
@@ -104,6 +146,7 @@ namespace Tic_Tac_Toe_Game
                 C1_bttn.Text = "O";
             }
             C1_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void C2_bttn_Click(object sender, EventArgs e)
@@ -117,6 +160,7 @@ namespace Tic_Tac_Toe_Game
                 C2_bttn.Text = "O";
             }
             C2_bttn.Enabled = false;
+            ChangeTurn();
         }
 
         private void C3_bttn_Click(object sender, EventArgs e)
@@ -130,6 +174,12 @@ namespace Tic_Tac_Toe_Game
                 C3_bttn.Text = "O";
             }
             C3_bttn.Enabled = false;
+            ChangeTurn();
+        }
+
+        private void NewGame_bttn_Click(object sender, EventArgs e)
+        {
+            resetGame();
         }
 
         public Form1()
