@@ -233,6 +233,16 @@ namespace Tic_Tac_Toe_Game
             resetGame();
         }
 
+        private void GameMechanics_bttn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Decide who plays X and who plays O \n" +
+            "2. Players take turns by putting their marks in empty squares \n" +
+            "3. The first player to get 3 of their marks in a row (vertically, horizontally, or diagonally) wins \n" +
+            "4. When all 9 squares are full, the game is over. \n" +
+            "If no player has 3 marks in a row, the game ends in a draw", "Game Mechanics");
+
+        }
+
         public Form1()
         {
             InitializeComponent();
