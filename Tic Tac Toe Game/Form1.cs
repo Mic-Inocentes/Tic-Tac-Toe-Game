@@ -38,7 +38,7 @@ namespace Tic_Tac_Toe_Game
                 (A2_bttn.Text == "X" && B2_bttn.Text == "X" && C2_bttn.Text == "X") ||
                 (A3_bttn.Text == "X" && B3_bttn.Text == "X" && C3_bttn.Text == "X") ||
                 (A1_bttn.Text == "X" && B2_bttn.Text == "X" && C3_bttn.Text == "X") ||
-                (A3_bttn.Text == "X" && B2_bttn.Text == "X" && C3_bttn.Text == "X"))
+                (A3_bttn.Text == "X" && B2_bttn.Text == "X" && C1_bttn.Text == "X"))
 
                 {
                 MessageBox.Show("X Wins!");
@@ -53,7 +53,7 @@ namespace Tic_Tac_Toe_Game
                 (A2_bttn.Text == "O" && B2_bttn.Text == "O" && C2_bttn.Text == "O") ||
                 (A3_bttn.Text == "O" && B3_bttn.Text == "O" && C3_bttn.Text == "O") ||
                 (A1_bttn.Text == "O" && B2_bttn.Text == "O" && C3_bttn.Text == "O") ||
-                (A3_bttn.Text == "O" && B2_bttn.Text == "O" && C3_bttn.Text == "O"))
+                (A3_bttn.Text == "O" && B2_bttn.Text == "O" && C1_bttn.Text == "O"))
 
             {
                 MessageBox.Show("O Wins!");
