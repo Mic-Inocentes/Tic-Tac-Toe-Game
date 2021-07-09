@@ -91,6 +91,8 @@ namespace Tic_Tac_Toe_Game
             C2_bttn.Text = "";
             C3_bttn.Enabled = true;
             C3_bttn.Text = "";
+            strWhoseTurnItIs = "X";
+            Turn1_lbl.Text = "X";
         }
 
         private void A1_bttn_Click(object sender, EventArgs e)
@@ -228,10 +230,7 @@ namespace Tic_Tac_Toe_Game
             ChangeTurn();
         }
 
-        private void NewGame_bttn_Click(object sender, EventArgs e)
-        {
-            resetGame();
-        }
+
 
         private void GameMechanics_bttn_Click(object sender, EventArgs e)
         {
@@ -241,6 +240,23 @@ namespace Tic_Tac_Toe_Game
             "4. When all 9 squares are full, the game is over. \n" +
             "If no player has 3 marks in a row, the game ends in a draw", "Game Mechanics");
 
+        }
+
+        private void NextRound_bttn_Click(object sender, EventArgs e)
+        {
+            resetGame();
+        }
+
+        private void ResetGame_bttn_Click(object sender, EventArgs e)
+        {
+            resetGame();
+
+            intXWins = 0;
+            intOWins = 0;
+            intTies = 0;
+            XScore_lbl.Text = "0";
+            OScore_lbl.Text = "0";
+            TieScore_lbl.Text = "0";
         }
 
         public Form1()
