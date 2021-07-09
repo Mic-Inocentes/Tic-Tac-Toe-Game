@@ -15,86 +15,6 @@ namespace Tic_Tac_Toe_Game
         int intXWins, intOWins, intTies;
         string strWhoseTurnItIs;
 
-        private void ChangeTurn()
-        {
-            if (strWhoseTurnItIs == "X")
-            {
-                strWhoseTurnItIs = "O";
-                Turn1_lbl.Text = "O";
-            }
-            else
-            {
-                strWhoseTurnItIs = "X";
-                Turn1_lbl.Text = "X";
-            }
-        }
-
-        private void CheckForWinner()
-        {
-            if ((A1_bttn.Text == "X" && A2_bttn.Text == "X" && A3_bttn.Text == "X") ||
-                (B1_bttn.Text == "X" && B2_bttn.Text == "X" && B3_bttn.Text == "X") ||
-                (C1_bttn.Text == "X" && C2_bttn.Text == "X" && C3_bttn.Text == "X") ||
-                (A1_bttn.Text == "X" && B1_bttn.Text == "X" && C1_bttn.Text == "X") ||
-                (A2_bttn.Text == "X" && B2_bttn.Text == "X" && C2_bttn.Text == "X") ||
-                (A3_bttn.Text == "X" && B3_bttn.Text == "X" && C3_bttn.Text == "X") ||
-                (A1_bttn.Text == "X" && B2_bttn.Text == "X" && C3_bttn.Text == "X") ||
-                (A3_bttn.Text == "X" && B2_bttn.Text == "X" && C1_bttn.Text == "X"))
-
-                {
-                MessageBox.Show("X Wins!");
-                intXWins++;
-                XScore_lbl.Text = intXWins.ToString();
-                }
-
-            else if ((A1_bttn.Text == "O" && A2_bttn.Text == "O" && A3_bttn.Text == "O") ||
-                (B1_bttn.Text == "O" && B2_bttn.Text == "O" && B3_bttn.Text == "O") ||
-                (C1_bttn.Text == "O" && C2_bttn.Text == "O" && C3_bttn.Text == "O") ||
-                (A1_bttn.Text == "O" && B1_bttn.Text == "O" && C1_bttn.Text == "O") ||
-                (A2_bttn.Text == "O" && B2_bttn.Text == "O" && C2_bttn.Text == "O") ||
-                (A3_bttn.Text == "O" && B3_bttn.Text == "O" && C3_bttn.Text == "O") ||
-                (A1_bttn.Text == "O" && B2_bttn.Text == "O" && C3_bttn.Text == "O") ||
-                (A3_bttn.Text == "O" && B2_bttn.Text == "O" && C1_bttn.Text == "O"))
-
-            {
-                MessageBox.Show("O Wins!");
-                intOWins++;
-                OScore_lbl.Text = intOWins.ToString();
-            }
-
-            else if (A1_bttn.Text !="" && A2_bttn.Text != "" && A3_bttn.Text != "" &&
-                B1_bttn.Text != "" && B2_bttn.Text != "" && B3_bttn.Text != "" &&
-                C1_bttn.Text != "" && C2_bttn.Text != "" && C3_bttn.Text != "")
-            {
-                MessageBox.Show("It's a tie!");
-                intTies++;
-                TieScore_lbl.Text = intTies.ToString();
-            }
-        }
-
-        private void resetGame()
-        {
-            A1_bttn.Enabled = true;
-            A1_bttn.Text = "";
-            A2_bttn.Enabled = true;
-            A2_bttn.Text = "";
-            A3_bttn.Enabled = true;
-            A3_bttn.Text = "";
-            B1_bttn.Enabled = true;
-            B1_bttn.Text = "";
-            B2_bttn.Enabled = true;
-            B2_bttn.Text = "";
-            B3_bttn.Enabled = true;
-            B3_bttn.Text = "";
-            C1_bttn.Enabled = true;
-            C1_bttn.Text = "";
-            C2_bttn.Enabled = true;
-            C2_bttn.Text = "";
-            C3_bttn.Enabled = true;
-            C3_bttn.Text = "";
-            strWhoseTurnItIs = "X";
-            Turn1_lbl.Text = "X";
-        }
-
         private void A1_bttn_Click(object sender, EventArgs e)
         {
             if (strWhoseTurnItIs == "X")
@@ -230,16 +150,84 @@ namespace Tic_Tac_Toe_Game
             ChangeTurn();
         }
 
-
-
-        private void GameMechanics_bttn_Click(object sender, EventArgs e)
+        private void ChangeTurn()
         {
-            MessageBox.Show("1. Decide who plays X and who plays O \n" +
-            "2. Players take turns by putting their marks in empty squares \n" +
-            "3. The first player to get 3 of their marks in a row (vertically, horizontally, or diagonally) wins \n" +
-            "4. When all 9 squares are full, the game is over. \n" +
-            "If no player has 3 marks in a row, the game ends in a draw", "Game Mechanics");
+            if (strWhoseTurnItIs == "X")
+            {
+                strWhoseTurnItIs = "O";
+                Turn1_lbl.Text = "O";
+            }
+            else
+            {
+                strWhoseTurnItIs = "X";
+                Turn1_lbl.Text = "X";
+            }
+        }
 
+        private void CheckForWinner()
+        {
+            if ((A1_bttn.Text == "X" && A2_bttn.Text == "X" && A3_bttn.Text == "X") ||
+                (B1_bttn.Text == "X" && B2_bttn.Text == "X" && B3_bttn.Text == "X") ||
+                (C1_bttn.Text == "X" && C2_bttn.Text == "X" && C3_bttn.Text == "X") ||
+                (A1_bttn.Text == "X" && B1_bttn.Text == "X" && C1_bttn.Text == "X") ||
+                (A2_bttn.Text == "X" && B2_bttn.Text == "X" && C2_bttn.Text == "X") ||
+                (A3_bttn.Text == "X" && B3_bttn.Text == "X" && C3_bttn.Text == "X") ||
+                (A1_bttn.Text == "X" && B2_bttn.Text == "X" && C3_bttn.Text == "X") ||
+                (A3_bttn.Text == "X" && B2_bttn.Text == "X" && C1_bttn.Text == "X"))
+
+                {
+                MessageBox.Show("X Wins!");
+                intXWins++;
+                XScore_lbl.Text = intXWins.ToString();
+                }
+
+            else if ((A1_bttn.Text == "O" && A2_bttn.Text == "O" && A3_bttn.Text == "O") ||
+                (B1_bttn.Text == "O" && B2_bttn.Text == "O" && B3_bttn.Text == "O") ||
+                (C1_bttn.Text == "O" && C2_bttn.Text == "O" && C3_bttn.Text == "O") ||
+                (A1_bttn.Text == "O" && B1_bttn.Text == "O" && C1_bttn.Text == "O") ||
+                (A2_bttn.Text == "O" && B2_bttn.Text == "O" && C2_bttn.Text == "O") ||
+                (A3_bttn.Text == "O" && B3_bttn.Text == "O" && C3_bttn.Text == "O") ||
+                (A1_bttn.Text == "O" && B2_bttn.Text == "O" && C3_bttn.Text == "O") ||
+                (A3_bttn.Text == "O" && B2_bttn.Text == "O" && C1_bttn.Text == "O"))
+
+            {
+                MessageBox.Show("O Wins!");
+                intOWins++;
+                OScore_lbl.Text = intOWins.ToString();
+            }
+
+            else if (A1_bttn.Text !="" && A2_bttn.Text != "" && A3_bttn.Text != "" &&
+                B1_bttn.Text != "" && B2_bttn.Text != "" && B3_bttn.Text != "" &&
+                C1_bttn.Text != "" && C2_bttn.Text != "" && C3_bttn.Text != "")
+            {
+                MessageBox.Show("It's a tie!");
+                intTies++;
+                TieScore_lbl.Text = intTies.ToString();
+            }
+        }
+
+        private void resetGame()
+        {
+            A1_bttn.Enabled = true;
+            A1_bttn.Text = "";
+            A2_bttn.Enabled = true;
+            A2_bttn.Text = "";
+            A3_bttn.Enabled = true;
+            A3_bttn.Text = "";
+            B1_bttn.Enabled = true;
+            B1_bttn.Text = "";
+            B2_bttn.Enabled = true;
+            B2_bttn.Text = "";
+            B3_bttn.Enabled = true;
+            B3_bttn.Text = "";
+            C1_bttn.Enabled = true;
+            C1_bttn.Text = "";
+            C2_bttn.Enabled = true;
+            C2_bttn.Text = "";
+            C3_bttn.Enabled = true;
+            C3_bttn.Text = "";
+            strWhoseTurnItIs = "X";
+            Turn1_lbl.Text = "X";
         }
 
         private void NextRound_bttn_Click(object sender, EventArgs e)
@@ -272,5 +260,13 @@ namespace Tic_Tac_Toe_Game
             strWhoseTurnItIs = "X";
         }
 
+        private void GameMechanics_bttn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Decide who plays X and who plays O \n" +
+            "2. Players take turns by putting their marks in empty squares \n" +
+            "3. The first player to get 3 of their marks in a row (vertically, horizontally, or diagonally) wins \n" +
+            "4. When all 9 squares are full, the game is over. \n" +
+            "If no player has 3 marks in a row, the game ends in a draw", "Game Mechanics");
+        }
     }
 }
